@@ -1,0 +1,12 @@
+{
+  "name": "Site Blocker",
+  "version": "1.0.0",
+  "description": "Blocks websites based on series of regex.",
+  "background": { "scripts": ["block.js"] },
+  "options_page": "options.html",
+  "permissions": [
+    "webRequest", "webRequestBlocking",
+    "http://*/*", "https://*/*"
+  ],
+  "manifest_version": 2
+}
