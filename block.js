@@ -7,7 +7,8 @@ chrome.webRequest.onBeforeRequest.addListener(
 		}
 
 		for (var match in blacklist) {
-			if (info.url.match(new RegExp(blacklist[match]))) {
+			var str = blacklist[match];
+			if (str !== "" && info.url.match(new RegExp(str))) {
 				return {cancel: true};
 			}
 		}
